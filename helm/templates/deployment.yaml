@@ -6,14 +6,12 @@ metadata:
 spec:
   replicas: {{ .Values.ReplicaNumber }}
   selector:
-    matchLabels: {{ .Release.Name }}
-# set your user name
-      app: izzytoc-hello-izzy
+    matchLabels: 
+      app: {{ .Release.Name }}
   template:
     metadata:
-      labels: {{ .Release.Name }}
-# set your user name
-        app: izzytoc-hello-izzy
+      labels: 
+        app: {{ .Release.Name }}
     spec:
       containers:
         - resources: {}
