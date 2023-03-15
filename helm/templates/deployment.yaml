@@ -6,11 +6,11 @@ metadata:
 spec:
   replicas: {{ .Values.ReplicaNumber }}
   selector:
-    matchLabels: 
+    matchLabels:
       app: {{ .Release.Name }}
   template:
     metadata:
-      labels: 
+      labels:
         app: {{ .Release.Name }}
     spec:
       containers:
